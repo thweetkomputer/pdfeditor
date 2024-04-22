@@ -63,7 +63,6 @@ struct ContentView: View {
         }
 
         if !canAccess {
-          // 无法访问文件，需要处理错误
           // TODO
         }
 
@@ -93,7 +92,6 @@ struct ContentView: View {
           fileURL.stopAccessingSecurityScopedResource()
         }
 
-        // 在这里处理文件内容
         if let pdfDocument = PDFDocument(url: fileURL) {
           let pages = parseNumberString(input: fileItem.fileText)
           for page in pages {
@@ -103,7 +101,7 @@ struct ContentView: View {
         }
 
         if !canAccess {
-          // 无法访问文件，需要处理错误
+
           // TODO
         }
       }
